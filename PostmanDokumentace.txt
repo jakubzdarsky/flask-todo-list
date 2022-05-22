@@ -1,0 +1,56 @@
+GET localhost/auth
+
+Headers
+KEY -> x-user-key
+
+VALUE -> lkdajc049dfnLSKFJ38FOIJEJFPA48FU40U8JLJSAKJDSLAKJklk (SECRET_KEY)
+
+
+
+POST localhost/task
+
+Headers
+KEY -> x-access-token  
+
+VALUE -> vygenerovaný token, který se generuje v localhost/auth
+
+
+KEY -> Content-type
+
+VALUE -> application/json
+
+
+
+PUT localhost/task/(id tasku)
+
+Headers
+KEY -> x-access-token  
+
+VALUE -> vygenerovaný token, který se generuje v localhost/auth
+
+
+BODY -> RAW -> JSON
+
+{
+    "name": "updated",
+    "content": "content updated",
+    "complete": true
+}
+
+
+
+GET localhost/?filter=(all/completed/not_completed)
+
+Params
+KEY -> filter
+
+VALUE -> (all / completed / not_completed)
+
+
+
+DELETE localhost/task/(id tasku)
+
+Headers
+KEY -> x-access-token  
+
+VALUE -> vygenerovaný token, který se generuje v localhost/auth
